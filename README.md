@@ -1,3 +1,8 @@
+# RESTy
+#### Version: 2.0.0
+#### Author: Cas Ibrahim
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
