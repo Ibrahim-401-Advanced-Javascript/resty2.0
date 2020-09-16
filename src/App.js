@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 
-// import Header from './components/Header/Header.js';
-// import Form from './components/Form/Form.js';
-// import Output from './components/Output/Output.js';
+import Header from './components/Header/Header.js';
+import Form from './components/Form/Form.js';
+import Results from './components/Results/Results.js';
 import Footer from '../src/components/Footer/Footer.js';
 
 class App extends React.Component {
@@ -35,9 +35,9 @@ class App extends React.Component {
     return (
       <div className="App">
 
-        {/* <Header />
+        <Header />
         <Form popStateMethod={this.stateMethod} popStateURL={this.stateURL} popList={this.listChar}/>
-        <Output method={this.state.method} url={this.state.url} count={this.state.count} results={this.state.results} headers={this.state.headers}/> */}
+        <Results method={this.state.method} url={this.state.url} count={this.state.count} results={this.state.results} headers={this.state.headers}/>
         <Footer />
 
       </div>
