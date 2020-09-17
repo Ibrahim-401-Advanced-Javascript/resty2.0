@@ -47,10 +47,6 @@ class Form extends React.Component {
     this.setState({ count, headers, results })
     this.props.popList(this.state.count, this.state.headers, this.state.results);
 
-
-    // save call to local storage
-
-
   }
 
   render() {
