@@ -4,13 +4,16 @@ import JSONPretty from 'react-json-pretty';
 
 const Results = (props) => {
   return (
-    <section className="Results-section">
-        <h3 id="results-header">Results:</h3>
+    <section className="Results">
+        <section id="results-header">
+          <h3>Results:</h3>
+        </section>
 
-        <h5 id="count">Count: {props.count}</h5>
-        {/* <h5 id="header-title">Headers: </h5> */}
-        <JSONPretty id="headers" data={props.headers}></JSONPretty>
-        <JSONPretty id="results" data={props.results}></JSONPretty>
+        <section id="results-body">
+          <h5 id="count">Count: {props.count}</h5>
+         <JSONPretty id="headers" data={props.headers}></JSONPretty>
+          <JSONPretty id="results" data={props.results}></JSONPretty>
+        </section>
     </section>
   )
 }

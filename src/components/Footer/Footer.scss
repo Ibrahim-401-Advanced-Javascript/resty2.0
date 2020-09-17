@@ -1,8 +1,11 @@
 .Footer-section {
   background-color: #FCFCFC;
-  min-height: 5vh;
-  display: flex;
-  flex-direction: column;
+  opacity: 80%;
+  display: grid;
+  grid-column: 1 / span 2;
+  grid-row: 4 / span 1;
+  // display: flex;
+  // flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(4px + 2vmin);

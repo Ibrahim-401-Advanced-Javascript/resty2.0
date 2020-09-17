@@ -9,6 +9,7 @@ class Form extends React.Component {
       method: '',
       url: '',
       count: 0,
+      headers: {},
       results: [],
     }
   }
@@ -27,8 +28,8 @@ class Form extends React.Component {
     event.preventDefault();
     let url = this.state.url;
     this.setState({ url });
-    this.props.popStateMethod(this.state.method);
-    this.props.popStateURL(this.state.url);
+
+    this.props.popCall(this.state.method, this.state.url);
 
     // send url to api
     let raw = await fetch(url);
@@ -43,12 +44,18 @@ class Form extends React.Component {
     let count = data.count;
     let results = data.results;
 
-    this.setState({ count, results, headers })
-    this.props.popList(this.state.count, this.state.results, this.state.headers);
+    this.setState({ count, headers, results })
+    this.props.popList(this.state.count, this.state.headers, this.state.results);
+
+
+    // save call to local storage
+
+
   }
 
   render() {
     return (
+      <section className="Form-section">
       <form className="Form" onSubmit={this.handleGo}>
         <br></br>
 
@@ -71,6 +78,7 @@ class Form extends React.Component {
         <input type="submit" id="go-button" value="GO"></input>
 
       </form>
+      </section>
     )
   }
 }
