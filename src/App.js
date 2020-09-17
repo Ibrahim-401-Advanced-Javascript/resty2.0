@@ -1,4 +1,6 @@
 import React from 'react';
+// import { Link, Navlink } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 import md5 from 'md5';
 // import axios from 'axios';
@@ -43,36 +45,6 @@ class App extends React.Component {
     });
   }
 
-  // updateResults = (count, headers, results) => {
-  //   this.setState({ count, headers, results });
-  //   console.log('in updateResults');
-  // }
-
-  // updateRequest = (request) => {
-
-  //   this.setState({ request });
-  //   console.log('in updateRequests');
-  //   console.log(this.state);
-  // }
-
-  // fetchResults = async (request) => {
-  //   try {
-  //     // this.toggleLoading();
-  //     this.updateRequest(request);
-  
-  //     let response = await axios(request);
-
-  //     // this.toggleLoading();
-
-  //     this.updateHistory(request);
-  //     this.updateRequest(response.count, response.headers, response.data);
-  //     console.log('hello from fetchResults');
-  //   }
-  //   catch (e) {
-  //     console.log(e);
-  //   }
-  // }
-
   listHistory = () => {
     console.log('logging before getting history');
     let history = JSON.parse(localStorage.getItem('history'));
@@ -98,13 +70,13 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-
+        <BrowserRouter>
         <Header />
         <Form request={this.state.request} popCall={this.listCall} popList={this.listChar}/>
         <History handleCall={this.listCall} calls={this.state.history}/>
         <Results method={this.state.method} url={this.state.url} count={this.state.count} results={this.state.results} headers={this.state.headers}/>
         <Footer />
-
+        </BrowserRouter>
       </div>
     );
   }

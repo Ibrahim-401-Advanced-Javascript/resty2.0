@@ -4,7 +4,7 @@ import './Footer.scss';
 const Footer = () => {
   return (
     <footer className="Footer-section">
-      <p>&copy; 2020 Cas Ibrahim</p>
+      &copy; 2020 Cas Ibrahim
     </footer>
     
   )
