@@ -15,14 +15,16 @@ const History = (props) => {
       <h3 id="calls-header">Previous Calls:</h3>
       
       <ul id="history-list">
-        {
+        {/* {
           Object.keys(calls).map(key =>           
             <li key={key}>
               <span className={`method ${props.calls[key].method}`}>{props.calls[key].method}</span>
               <button className="url" onClick={()=> loadRequest(props.calls[key])}>{props.calls[key].url}</button>
             </li>,
           )
-        }
+        } */}
+        {/* <li>{props.method}</li>
+        <li>{props.url}</li> */}
       </ul>
  
     </section>
