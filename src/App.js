@@ -73,13 +73,13 @@ class App extends React.Component {
       <div className="App">
         <BrowserRouter>
         
-        <Header />
-        <Form request={this.state.request} popCall={this.listCall} popList={this.listChar}/>
-        <Main />
-        {/* <History handleCall={this.listCall} request={this.state.request}/> */}
-        {/* <Results method={this.state.method} url={this.state.url} count={this.state.count} results={this.state.results} headers={this.state.headers}/> */}
-        
-        <Footer />
+          <Header />
+          <Form request={this.state.request} popCall={this.listCall} popList={this.listChar}/>
+          <Main />
+          {/* <History handleCall={this.listCall} request={this.state.request}/> */}
+          {/* <Results method={this.state.method} url={this.state.url} count={this.state.count} results={this.state.results} headers={this.state.headers}/> */}
+          <Footer />
+
         </BrowserRouter>
       </div>
     );

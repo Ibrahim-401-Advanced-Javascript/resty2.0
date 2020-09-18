@@ -3,7 +3,7 @@ import React from 'react'
 function Help() {
   return (
     <section className="Help">
-    <h2>Help Sample Content</h2>
+    <h3>Help Sample Content</h3>
   </section>
   )
 }

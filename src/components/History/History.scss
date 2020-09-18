@@ -1,3 +1,23 @@
 .History {
   background-color: #CEDFD4;
 }
+
+#history-list {
+  list-style-type: none;
+}
+
+#method {
+  background-color: #496F58;
+  color: #FCFCFC;
+  border-radius: 4px;
+  margin-right: 2em;
+  padding: 0.4em;
+}
+
+#url {
+  background-color: #FCFCFC;
+  color: #496F58;
+  border-radius: 4px;
+  margin-right: 2em;
+  padding: 0.4em;
+}
