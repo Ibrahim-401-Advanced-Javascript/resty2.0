@@ -3,11 +3,11 @@ import './History.scss';
 
 const History = (props) => {
 
-  const calls = props.calls || {};
+  const request = props.request || {};
 
-  function loadRequest(call) {
-    props.handleCall(call);
-  }
+  // function loadRequest(request) {
+  //   props.handleCall(request);
+  // }
 
 
   return (
@@ -15,14 +15,15 @@ const History = (props) => {
       <h3 id="calls-header">Previous Calls:</h3>
       
       <ul id="history-list">
-        {/* {
-          Object.keys(calls).map(key =>           
+        {
+          Object.keys(request).map(key =>           
             <li key={key}>
-              <span className={`method ${props.calls[key].method}`}>{props.calls[key].method}</span>
-              <button className="url" onClick={()=> loadRequest(props.calls[key])}>{props.calls[key].url}</button>
+              <span className={`method ${props.request[key].method}`}>{props.request[key].method}</span>
+          <span className="url">{props.request[key].url}</span>
+              {/* <button className="url" onClick={()=> loadRequest(props.request[key])}>{props.request[key].url}</button> */}
             </li>,
           )
-        } */}
+        }
         {/* <li>{props.method}</li>
         <li>{props.url}</li> */}
       </ul>

@@ -1,13 +1,12 @@
 .Footer-section {
   background-color: #FCFCFC;
-  // opacity: 80%;
-  display: grid;
-  grid-column: 1 / span 2;
-  grid-row: 4 / span 1;
-  // display: flex;
-  // flex-direction: column;
+  font-size: 0.5em;;
+  color: #282c34;
+
+  display: flex;
+  flex-direction: column;
+  flex: 0;
   align-items: center;
   justify-content: center;
-  font-size: calc(4px + 2vmin);
-  color: #282c34;
+
 }

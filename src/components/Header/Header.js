@@ -6,9 +6,11 @@ const Header = () => {
   return (
 
     <header className="App-header">
+      
       <section id="title-section">
         <h1 id="resty-title">RESTy</h1>
       </section>
+
       <section id="nav-section">
         <nav>
           <ul id="nav-ul">
@@ -23,8 +25,8 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-
       </section>
+      
     </header>
   )
 }
