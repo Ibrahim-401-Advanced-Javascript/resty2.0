@@ -3,38 +3,11 @@
   color: #282c34;
 }
 
-// #results-header {
-//   grid-column: 1 / span 1;
-//   grid-row: 1 / span 1;
-//   // border: 1px solid blue;
-// }
+#headers {
+  font-weight: bold;
+}
 
-// #results-body {
-//   grid-column: 1 / span 1;
-//   grid-row: 2 / span 3;
-//   // overflow-x: hidden;
-//   overflow-y: scroll;
-//   // border: 1px solid orange;
-// }
-
-// ::-webkit-scrollbar {
-//   display: none;
-// }
-
-// #count {
-//   grid-column: 1 / span 1;
-//   grid-row: 2 / span 1;
-// }
-
-// #headers {
-//   grid-column: 1 / span 1;
-//   grid-row: 3 / span 1;
-//   font-weight: bold;
-// }
-
-// #results {
-//   grid-column: 1 / span 1;
-//   grid-row: 4 / span 1;
-// }
-
+::-webkit-scrollbar {
+  display: none;
+}
 

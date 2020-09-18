@@ -8,8 +8,8 @@ const History = (props) => {
       <h3 id="calls-header">Previous Calls:</h3>
       
       <ul id="history-list">
-        <li id="method">Method</li>
-        <li id="url">Url</li>
+        <li id="method">{props.state.request.method}</li>
+        <li id="url">{props.state.request.url}</li>
       </ul>
  
     </section>
