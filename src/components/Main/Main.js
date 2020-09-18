@@ -3,8 +3,11 @@ import './Main.scss';
 
 import { Route, Switch } from 'react-router-dom';
 
-import Home from './Home.js';
-import Test from './Test.js';
+// import Home from './Home.js';
+import History from '../History/History.js';
+import '../../App.js'
+import Results from '../Results/Results.js';
+// import Test from './Test.js';
 import Help from './Help.js';
 
 function Main() {
@@ -13,11 +16,13 @@ function Main() {
       <Switch>
 
         <Route exact path="/">
-          <Home />
+          <Results />
+          {/* <Home /> */}
         </Route>
 
         <Route exact path="/history">
-          <Test />
+          <History />
+          {/* <Test /> */}
         </Route>
 
         <Route exact path="/help">

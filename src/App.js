@@ -10,8 +10,8 @@ import './App.css';
 import Header from './components/Header/Header.js';
 import Form from './components/Form/Form.js';
 import Main from './components/Main/Main.js';
-import History from './components/History/History.js';
-import Results from './components/Results/Results.js';
+// import History from './components/History/History.js';
+// import Results from './components/Results/Results.js';
 import Footer from '../src/components/Footer/Footer.js';
 
 class App extends React.Component {
@@ -76,8 +76,8 @@ class App extends React.Component {
         <Header />
         <Form request={this.state.request} popCall={this.listCall} popList={this.listChar}/>
         <Main />
-        {/* <History handleCall={this.listCall} request={this.state.request}/>
-        <Results method={this.state.method} url={this.state.url} count={this.state.count} results={this.state.results} headers={this.state.headers}/> */}
+        {/* <History handleCall={this.listCall} request={this.state.request}/> */}
+        {/* <Results method={this.state.method} url={this.state.url} count={this.state.count} results={this.state.results} headers={this.state.headers}/> */}
         
         <Footer />
         </BrowserRouter>
