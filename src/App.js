@@ -33,11 +33,11 @@ class App extends React.Component {
   }
 
   updateHistory = (req) => {
-    console.log('logging before updateHistory');
+    // console.log('logging before updateHistory');
 
     let hash = md5(JSON.stringify(req));
 
-    console.log(hash);
+    // console.log(hash);
 
     const history = { ...this.state.history, [hash]: req };
 
@@ -47,7 +47,7 @@ class App extends React.Component {
   }
 
   listHistory = () => {
-    console.log('logging before getting history');
+    // console.log('logging before getting history');
     let history = JSON.parse(localStorage.getItem('history'));
     this.setState({ history });
   }
@@ -65,7 +65,7 @@ class App extends React.Component {
   listChar = (count, headers, results) => {
     this.setState({ count, headers, results })
     
-    console.log(this.state);
+    // console.log('state from app:', this.state);
   }
 
   render() {
@@ -75,9 +75,7 @@ class App extends React.Component {
         
           <Header />
           <Form request={this.state.request} popCall={this.listCall} popList={this.listChar}/>
-          <Main />
-          {/* <History handleCall={this.listCall} request={this.state.request}/> */}
-          {/* <Results method={this.state.method} url={this.state.url} count={this.state.count} results={this.state.results} headers={this.state.headers}/> */}
+          <Main state={this.state}/>
           <Footer />
 
         </BrowserRouter>
