@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link, Navlink } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 
 import md5 from 'md5';
@@ -10,8 +9,6 @@ import './App.css';
 import Header from './components/Header/Header.js';
 import Form from './components/Form/Form.js';
 import Main from './components/Main/Main.js';
-// import History from './components/History/History.js';
-// import Results from './components/Results/Results.js';
 import Footer from '../src/components/Footer/Footer.js';
 
 class App extends React.Component {
@@ -32,14 +29,14 @@ class App extends React.Component {
     this.setState({ loading: !this.state.loading });
   }
 
-  updateHistory = (req) => {
-    // console.log('logging before updateHistory');
+  updateHistory = (request) => {
+    console.log('logging before updateHistory');
 
-    let hash = md5(JSON.stringify(req));
+    let hash = md5(JSON.stringify(request));
 
-    // console.log(hash);
+    console.log(hash);
 
-    const history = { ...this.state.history, [hash]: req };
+    const history = { ...this.state.history, [hash]: request };
 
     this.setState({ history }, () => {
       localStorage.setItem('history', JSON.stringify(this.state.history));
@@ -47,9 +44,10 @@ class App extends React.Component {
   }
 
   listHistory = () => {
-    // console.log('logging before getting history');
+    console.log('logging before getting history');
     let history = JSON.parse(localStorage.getItem('history'));
     this.setState({ history });
+    console.log(history);
   }
 
   listCall = (method, url) => {
@@ -59,6 +57,7 @@ class App extends React.Component {
     }
 
     this.setState({ request })
+    this.updateHistory({request});
     
   }
 
